@@ -25,12 +25,20 @@ class MyFirstContrller extends Controller
 
     // insert Data
     public function insertData(Request $req){
+
+
             $insData = new order();
             $insData->name = $req->uName;
             $insData->email = $req->uEmail;
             $insData->save();
           return redirect('order');
         
+    }
+
+    public function selectData(){
+        $allUsers = new order();
+        $allUsersData = $allUsers::all();
+        return view('selectUsers',compact('allUsersData'));
     }
   
 }

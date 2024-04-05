@@ -35,3 +35,4 @@ Route::get('order',function(){
     return view('orders');
 });
 Route::post('order',[MyFirstContrller::class,'insertData']);
+Route::get('select2',[MyFirstContrller::class,'selectData']);
