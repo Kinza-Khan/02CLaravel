@@ -31,14 +31,29 @@ class MyFirstContrller extends Controller
             $insData->name = $req->uName;
             $insData->email = $req->uEmail;
             $insData->save();
-          return redirect('order');
+          return redirect('select2');
         
     }
 
     public function selectData(){
-        $allUsers = new order();
-        $allUsersData = $allUsers::all();
+        // $allUsers = new order();
+        $allUsersData = order::all();
         return view('selectUsers',compact('allUsersData'));
+    }
+    // // show 
+    public function showData($uId){
+            $selectData = order::find($uId);
+            return view('edit',compact('selectData'));
+    }
+
+    // update
+    public function updateData(Request $req , $id){
+            $userData = order::find($id);
+            $userData->name = $req->uName;
+            $userData->email = $req->uEmail;
+            $userData->save();
+            return redirect('select2');
+
     }
   
 }

@@ -36,3 +36,5 @@ Route::get('order',function(){
 });
 Route::post('order',[MyFirstContrller::class,'insertData']);
 Route::get('select2',[MyFirstContrller::class,'selectData']);
+Route::get('edit/{id}',[MyFirstContrller::class,'showData']);
+Route::post('edit/{id}',[MyFirstContrller::class,'updateData']);

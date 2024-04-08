@@ -29,6 +29,7 @@
                       <th scope="row">{{$user['id']}}</th>
                       <td>{{$user['name']}}</td>
                       <td>{{$user['email']}}</td>
+                      <td><a class="btn btn-info" href="edit/{{$user['id']}}">Edit</a></td>
                      
                     </tr>
                     
