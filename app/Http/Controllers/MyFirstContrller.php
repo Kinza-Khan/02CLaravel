@@ -21,20 +21,14 @@ class MyFirstContrller extends Controller
         $userData = [$userName,$userEmail,$userPass];
         return view('select',compact('userData'));
     } 
-
-
     // insert Data
     public function insertData(Request $req){
-
-
             $insData = new order();
-            $insData->name = $req->uName;
-            $insData->email = $req->uEmail;
+            $insData->name = $req->Name;
+            $insData->email = $req->Email;
             $insData->save();
           return redirect('select2');
-        
     }
-
     public function selectData(){
         // $allUsers = new order();
         $allUsersData = order::all();
@@ -45,12 +39,11 @@ class MyFirstContrller extends Controller
             $selectData = order::find($uId);
             return view('edit',compact('selectData'));
     }
-
     // update
     public function updateData(Request $req , $id){
             $userData = order::find($id);
-            $userData->name = $req->uName;
-            $userData->email = $req->uEmail;
+            $userData->name = $req->Name;
+            $userData->email = $req->Email;
             $userData->save();
             return redirect('select2');
 

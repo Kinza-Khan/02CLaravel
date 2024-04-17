@@ -16,12 +16,12 @@
                     @csrf
                     <div class="form-group">
                       <label for="">Name</label>
-                      <input type="text" name="uName" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                      <input type="text" name="Name" id="" class="form-control" placeholder="" aria-describedby="helpId">
                      
                     </div>
                     <div class="form-group">
                       <label for="">Email</label>
-                      <input type="text" name="uEmail" id="" class="form-control" -placeholder="" aria-describedby="helpId">
+                      <input type="text" name="Email" id="" class="form-control" -placeholder="" aria-describedby="helpId">
                      
                     </div>
                     <button class="btn btn-info" name="orderPlace" >Submit</button>

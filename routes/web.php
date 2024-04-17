@@ -27,7 +27,7 @@ Route::get('about',function(){
 Route::get('users',[MyFirstContrller::class,'userData']);
 
 
-Route::get('register',function(){
+Route::get('reg',function(){
     return view('register');
 });
 Route::post('register',[MyFirstContrller::class,'subData']);
