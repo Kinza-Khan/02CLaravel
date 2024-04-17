@@ -23,6 +23,11 @@ class MyFirstContrller extends Controller
     } 
     // insert Data
     public function insertData(Request $req){
+
+            $req->validate([
+                'Name'=>'required',
+                'Email'=>'required'
+            ]);
             $insData = new order();
             $insData->name = $req->Name;
             $insData->email = $req->Email;

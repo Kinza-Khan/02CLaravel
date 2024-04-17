@@ -16,12 +16,17 @@
                     @csrf
                     <div class="form-group">
                       <label for="">Name</label>
-                      <input type="text" name="Name" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                     
+                      <input type="text" value="{{old('Name')}}" name="Name" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                      @error('Name')
+                      <small class="text-danger">{{$message}}</small>
+                      @enderror
                     </div>
                     <div class="form-group">
                       <label for="">Email</label>
-                      <input type="text" name="Email" id="" class="form-control" -placeholder="" aria-describedby="helpId">
+                      <input type="text" value="{{old('Email')}}"  name="Email" id="" class="form-control" -placeholder="" aria-describedby="helpId">
+                      @error('Email')
+                      <small  class="text-danger ">{{$message}}</small>
+                      @enderror
                      
                     </div>
                     <button class="btn btn-info" name="orderPlace" >Submit</button>
